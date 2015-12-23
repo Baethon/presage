@@ -21,6 +21,15 @@ class MethodMockWrapperTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
+    public function it_returns_name()
+    {
+        $method = new MethodMockWrapper('testMethod');
+        $this->assertEquals('testMethod', $method->getName());
+    }
+
+    /**
+     * @test
+     */
     public function it_applies_return_value()
     {
         $method = new MethodMockWrapper('testMethod', ['foo']);

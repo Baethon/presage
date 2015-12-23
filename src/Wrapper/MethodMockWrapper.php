@@ -52,4 +52,9 @@ class MethodMockWrapper
             ->method($this->methodName)
             ->will($this->stub);
     }
+
+    public function getName(): string
+    {
+        return $this->methodName;
+    }
 }
